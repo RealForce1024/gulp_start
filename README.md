@@ -22,5 +22,4 @@ gulp taskName
 
 
 ###
-git tag -a 'gulp-hello' -m 'gulp task hello world' HEAD
-git push origin tag push gulp-hello
+git tag -a 'gulp-hello' -m 'gulp task hello world' da36850
