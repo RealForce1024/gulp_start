@@ -4,9 +4,12 @@ add package.json --npm init
 add 'gulp task' --vim gulpfile.js
 
 # npm install devDependencies
-npm install gulp --save-dev  
-npm install gulp-uglify --save-dev
-
+"gulp": "^3.9.0",
+"gulp-concat": "^2.6.0",
+"gulp-jshint": "^2.0.0",
+"gulp-uglify": "^1.5.1",
+"jshint": "^2.8.0"  
+please read the package.json
 # atom plugin
 gulp-manager
 bottom-dock
