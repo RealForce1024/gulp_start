@@ -21,9 +21,8 @@
     .pipe(plugins.jshint.reporter('default'))
     .pipe(plugins.uglify())
     .pipe(plugins.concat('app.js'))
-    .pipe(gulp.dest('build'))  //.pipe(plugins.gulp.dest('build'))
+    .pipe(gulp.dest('build'))  //.pipe(plugins.gulp.dest('build')) 这种方式是错误的
   });
-
 /////gulp gulp-load-plugin end///////////////////////////////////////////
 
 
@@ -80,7 +79,9 @@ gulp.task('css', function () {
 //   console.log('build');
 // });
 //上面的函数如果不做啥事情，只是统一管理任务执行,function参数也是可选的
-gulp.task('build',['js','css','html']);
+gulp.task('build',['js','css','html'],function () {
+  console.log('build');
+});
 
 //第二个函数array,可选
 // gulp.task('default',['build'], function () {
@@ -92,3 +93,10 @@ gulp.task('build',['js','css','html']);
 //   console.log('default');
 // });
 /////gulp task() end///////////////////////////////////////////
+
+
+/////gulp watch() start///////////////////////////////////////////
+gulp.task('watch', function () {
+  gulp.watch('template/*.html', ['build']);
+});
+/////gulp watch() end///////////////////////////////////////////
