@@ -1,5 +1,24 @@
 {
-  "devDependencies": {
-    "gulp": "^3.9.0"
-  }
+  "name": "gulp_start",
+  "version": "1.0.0",
+  "description": "gulp start",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fqc/gulp_start.git"
+  },
+  "keywords": [
+    "gulp",
+    "start",
+    "demo"
+  ],
+  "author": "fqc",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/fqc/gulp_start/issues"
+  },
+  "homepage": "https://github.com/fqc/gulp_start#readme"
 }
