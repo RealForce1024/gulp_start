@@ -1,7 +1,33 @@
-var gulp = require('gulp'),
-  uglify = require('gulp-uglify');
-  jshint = require('gulp-jshint'),
-  concat = require('gulp-concat');
+// var gulp = require('gulp'),
+  // uglify = require('gulp-uglify');
+  // jshint = require('gulp-jshint'),
+  // concat = require('gulp-concat');
+
+
+  /////gulp gulp-load-plugin start///////////////////////////////////////////
+      // var gulp = require('gulp'),
+      //   uglify = require('gulp-uglify');
+      //   jshint = require('gulp-jshint'),
+      //   concat = require('gulp-concat');
+  var gulp = require('gulp'),
+    gulploadPlugins = require('gulp-load-plugins'),
+    plugins = gulploadPlugins();
+
+  gulp.task('Task', function () {
+    console.log('new task');
+    return gulp.src(['js/*.js','!js/*.min.js'])
+    // return gulp.src('js/*.js') //包含min.js文件也被压缩合并进去了
+    .pipe(plugins.jshint())
+    .pipe(plugins.jshint.reporter('default'))
+    .pipe(plugins.uglify())
+    .pipe(plugins.concat('app.js'))
+    .pipe(gulp.dest('build'))  //.pipe(plugins.gulp.dest('build'))
+  });
+
+/////gulp gulp-load-plugin end///////////////////////////////////////////
+
+
+
 
 /////gulp src() start///////////////////////////////////////////
 // gulp.task('hello', function () {
