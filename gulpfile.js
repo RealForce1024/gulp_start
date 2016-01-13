@@ -15,7 +15,8 @@ var gulp = require('gulp'),
 // });
 
 gulp.task('Task', function () {
-  return gulp.src('js/*.js')
+  return gulp.src(['js/*.js','!js/*.min.js'])
+  // return gulp.src('js/*.js') //包含min.js文件也被压缩合并进去了
   .pipe(jshint())
   .pipe(jshint.reporter('default'))
   .pipe(uglify())
