@@ -30,7 +30,23 @@ var gulp = require('gulp'),
 
 
 
-//defining tasks
-gulp.task('gretting', function () {
-  console.log('hell world');
+//defining simple tasks
+// gulp.task('gretting', function () {
+//   console.log('hell world');
+// });
+
+
+
+//defining multiply tasks
+gulp.task('js', function () {
+  console.log('js');
 });
+gulp.task('html', function () {
+  console.log('html');
+});
+gulp.task('css', function () {
+  console.log('css');
+});
+gulp.task('build',['js','html','css'],function () {
+  console.log('build');
+})
