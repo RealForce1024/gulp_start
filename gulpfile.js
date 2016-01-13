@@ -3,9 +3,9 @@ var gulp = require('gulp'),
   jshint = require('gulp-jshint'),
   concat = require('gulp-concat');
 
+/////gulp src() start///////////////////////////////////////////
 // gulp.task('hello', function () {
 //   console.log("hello world");
-//
 // });
 
 // gulp.task('minify', function () {
@@ -13,8 +13,11 @@ var gulp = require('gulp'),
 //   .pipe(uglyfy())
 //   .pipe(gulp.dest('build'))
 // });
+/////gulp src() end///////////////////////////////////////////
 
 
+
+/////gulp src() start///////////////////////////////////////////
 //gulp.src()
 //
 // gulp.task('Task', function () {
@@ -26,10 +29,10 @@ var gulp = require('gulp'),
 //   .pipe(concat('app.js'))
 //   .pipe(gulp.dest('build'))
 // });
+/////gulp src() end///////////////////////////////////////////
 
 
-
-
+/////gulp task() start///////////////////////////////////////////
 //defining simple tasks
 // gulp.task('gretting', function () {
 //   console.log('hell world');
@@ -47,6 +50,19 @@ gulp.task('html', function () {
 gulp.task('css', function () {
   console.log('css');
 });
-gulp.task('build',['js','html','css'],function () {
-  console.log('build');
-})
+// gulp.task('build',['js','html','css'],function () {
+//   console.log('build');
+// });
+//上面的函数如果不做啥事情，只是统一管理任务执行,function参数也是可选的
+gulp.task('build',['js','css','html']);
+
+//第二个函数array,可选
+// gulp.task('default',['build'], function () {
+//   console.log('default');
+// });
+
+//默认执行 gulp命令时 即是默认执行该default任务
+// gulp.task('default', function () {
+//   console.log('default');
+// });
+/////gulp task() end///////////////////////////////////////////
