@@ -96,7 +96,15 @@ gulp.task('build',['js','css','html'],function () {
 
 
 /////gulp watch() start///////////////////////////////////////////
+// gulp.task('watch', function () {
+//   gulp.watch('template/*.html', ['build']);
+// });
+
 gulp.task('watch', function () {
-  gulp.watch('template/*.html', ['build']);
+  gulp.watch('template/*.html', function (event) {
+      console.log("event type",event.type);
+      console.log("event type",event.path);
+  });
 });
+
 /////gulp watch() end///////////////////////////////////////////
